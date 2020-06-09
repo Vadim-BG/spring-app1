@@ -22,13 +22,14 @@
     </bean>
 
     <bean id="musicPlayer"
-          class="ru.nickoff.springcourse.MusicPlayer">
+          class="ru.nickoff.springcourse.MusicPlayer"
+          scope="prototype">
         <property name="musicList">
-                <list>
-                    <ref bean="musicBean1"/>
-                    <ref bean="musicBean2"/>
-                    <ref bean="musicBean3"/>
-                </list>
+            <list>
+                <ref bean="musicBean1"/>
+                <ref bean="musicBean2"/>
+                <ref bean="musicBean3"/>
+            </list>
         </property>
 
         <property name="name" value="${musicPlayer.name}"/>
