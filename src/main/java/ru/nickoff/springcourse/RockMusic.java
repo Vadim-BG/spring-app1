@@ -1,5 +1,9 @@
 package ru.nickoff.springcourse;
 
+import org.springframework.stereotype.Component;
+
+@Component
+
 public class RockMusic implements Music{
 
     @Override
