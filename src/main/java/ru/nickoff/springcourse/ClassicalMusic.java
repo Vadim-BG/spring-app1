@@ -12,26 +12,20 @@ import java.util.List;
 
 public class ClassicalMusic implements Music {
 
-    @PostConstruct
+
     public void doMyInit(){
         System.out.println("Doing my initialization");
     }
 
-    @PreDestroy
+
     public void doMyDestroy(){
         System.out.println("Doing my destruction");
     }
 
-    private List<String> songs = new ArrayList<>();
 
-    {
-        songs.add("Hungarian Rhapsody");
-        songs.add("Symphony no. 5 in C Minor, op. 67");
-        songs.add("Night on Bald Mountain");
-    }
 
     @Override
-    public List<String> getSong() {
-        return songs;
+    public String getSong() {
+        return "Hungarian Rhapsody";
     }
 }
