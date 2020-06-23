@@ -1,24 +1,23 @@
 package ru.nickoff.springcourse;
 
+import org.springframework.stereotype.Component;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Component
 public class RapMusic implements Music{
 
-    public RapMusic() {}
+    private List<String> songs = new ArrayList<>();
 
-    public static RapMusic getRapMusic(){
-        return new RapMusic();
-    }
-
-
-    public void doMyInit(){
-        System.out.println("Doing my initialization");
-    }
-
-    public void doMyDestroy(){
-        System.out.println("Doing my destruction");
+    {
+        songs.add("Life is good");
+        songs.add("Fuck the police");
+        songs.add("Changes");
     }
 
     @Override
-    public String getSong() {
-        return "U Can't Touch This";
+    public List<String> getSong() {
+        return songs;
     }
 }
